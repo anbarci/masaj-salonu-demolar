@@ -3,127 +3,243 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Masaj Salonu Demoları</title>
-<meta name="description" content="Masaj salonu web sitesi için yedi tasarım yönünün canlı demoları; rakip analizine göre önerilen yön G · Net.">
+<title>Masaj Salonu Web Sitesi: Tasarım Seçenekleri</title>
+<meta name="description" content="Masaj salonunuz için hazırladığımız yedi web sitesi tasarımı. Hepsi ziyaretçiyi WhatsApp'tan yazmaya ya da aramaya yönlendirir.">
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:,">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Masaj salonunuz için yedi site tasarımı">
+<meta property="og:description" content="Demoları açıp telefonda ve bilgisayarda deneyin, beğendiğinizi seçin.">
+<meta property="og:url" content="https://anbarci.github.io/masaj-salonu-demolar/">
+<meta property="og:image" content="https://anbarci.github.io/masaj-salonu-demolar/img/on-g-net.jpg">
+<meta name="theme-color" content="#F3F7F5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2314211B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300..700&display=swap">
 <style>
-:root { --zemin: #F4F4F2; --yuzey: #FBFBFA; --murekkep: #1D1F22; --soluk: #55595F; --cizgi: #D6D7D9; --dugme: #1D1F22; --dugme-uzeri: #F4F4F2; --r: 10px; color-scheme: light dark; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --zemin: #151618; --yuzey: #1C1D20; --murekkep: #E8E9EB; --soluk: #A4A8AE; --cizgi: #2D2F33; --dugme: #E8E9EB; --dugme-uzeri: #151618; } }
-:root[data-theme="dark"] { --zemin: #151618; --yuzey: #1C1D20; --murekkep: #E8E9EB; --soluk: #A4A8AE; --cizgi: #2D2F33; --dugme: #E8E9EB; --dugme-uzeri: #151618; }
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--zemin); color: var(--murekkep); font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
-main { max-width: 1200px; margin: 0 auto; padding: 2.5rem 16px 4rem; }
-h1 { font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem); line-height: 1.1; margin: 0 0 .75rem; letter-spacing: -0.02em; }
-h2 { font-size: 1.35rem; margin: 0; letter-spacing: -0.01em; }
+:root {
+  --zemin: #F3F7F5;
+  --yuzey: #EAEEEC;
+  --kart: #FCFDFC;
+  --murekkep: #14211B;
+  --murekkep-hover: #24362D;
+  --soluk: #4C5B54;
+  --cizgi: #D8DDDA;
+  --eylem: #0F7A3E;
+  --golge: rgb(20 33 27 / .45);
+  --r: 14px;
+  --r-k: 10px;
+  --kap: 1180px;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--zemin); color: var(--murekkep); font-family: "Lexend", system-ui, sans-serif; font-size: 1rem; line-height: 1.65; }
+h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -0.03em; text-wrap: balance; overflow-wrap: anywhere; min-width: 0; }
+h1 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.25rem); font-weight: 700; letter-spacing: -0.035em; }
+h2 { font-size: clamp(1.5rem, 1.25rem + 1.2vw, 2.125rem); font-weight: 650; }
+h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; }
 p { margin: 0; }
-.giris { color: var(--soluk); max-width: 62ch; margin-bottom: 2.5rem; }
-.yonler { display: grid; gap: 2.5rem; }
-@media (min-width: 900px) { .yonler { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
-.yon { display: grid; gap: .85rem; align-content: start; }
-.resim { display: block; border-radius: var(--r); overflow: hidden; border: 1px solid var(--cizgi); background: var(--yuzey); }
-.resim img { display: block; width: 100%; height: auto; }
-.yon p { color: var(--soluk); }
-.renk { display: flex; gap: .4rem; }
-.renk i { width: 1.6rem; height: 1.6rem; border-radius: 6px; border: 1px solid var(--cizgi); }
-.renk .r1 { background: #EDEFEE; } .renk .r2 { background: #1C2529; } .renk .r3 { background: #A9442A; }
-.renk .r4 { background: #131110; } .renk .r5 { background: #EFE8DE; } .renk .r6 { background: #D6A574; }
-.renk .r7 { background: #F6F7F5; } .renk .r8 { background: #16203A; } .renk .r9 { background: #2C3E8F; }
-.renk .r10 { background: #E9E9E5; } .renk .r11 { background: #121212; } .renk .r12 { background: #D91414; }
-.renk .r13 { background: #FAFAF9; } .renk .r14 { background: #1C1C1A; } .renk .r15 { background: #66665F; }
-.renk .r16 { background: #12352B; } .renk .r17 { background: #F1F2EC; } .renk .r18 { background: #E9A23B; }
-.onerilen { display: grid; gap: 1.5rem; margin-bottom: 3.5rem; padding: 1.5rem; border-radius: 14px; background: var(--yuzey); border: 1px solid var(--cizgi); }
-.onerilen .resim { border: 1px solid var(--cizgi); }
-.onerilen ul { margin: 0; padding-left: 1.1rem; color: var(--soluk); display: grid; gap: .3rem; }
-.onerilen .etiket { font-weight: 600; color: var(--soluk); }
-@media (min-width: 900px) { .onerilen { grid-template-columns: 1.2fr 1fr; gap: 2.5rem; padding: 2rem; align-items: center; } }
-.yonler-baslik { font-size: 1.35rem; margin: 0 0 1.5rem; }
-dl { margin: 0; display: grid; grid-template-columns: 4.5rem 1fr; gap: .2rem .75rem; font-size: .95rem; }
-dt { font-weight: 600; }
-dd { margin: 0; color: var(--soluk); }
-.dugme { justify-self: start; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 1.4rem; border-radius: var(--r); background: var(--dugme); color: var(--dugme-uzeri); font-weight: 600; text-decoration: none; white-space: nowrap; transition: transform .16s ease, opacity .2s ease; }
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+:focus-visible { outline: 3px solid var(--eylem); outline-offset: 3px; border-radius: 4px; }
+.kap { max-width: var(--kap); margin-inline: auto; padding-inline: 1rem; }
+@media (min-width: 768px) { .kap { padding-inline: 2rem; } }
+
+.dugme { display: inline-flex; align-items: center; justify-content: center; justify-self: start; min-height: 52px; padding: 0 1.5rem; border-radius: var(--r-k); font: inherit; font-weight: 600; text-decoration: none; text-align: center; background: var(--murekkep); color: var(--zemin); transition: background-color .2s ease, transform .16s cubic-bezier(0.23, 1, 0.32, 1); }
 .dugme:active { transform: scale(.97); }
-.dugme:focus-visible { outline: 3px solid var(--murekkep); outline-offset: 3px; }
-@media (hover: hover) { .dugme:hover { opacity: .88; } }
+@media (hover: hover) { .dugme:hover { background: var(--murekkep-hover); } }
 @media (prefers-reduced-motion: reduce) { .dugme { transition: none; } .dugme:active { transform: none; } }
-.not { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--cizgi); color: var(--soluk); max-width: 70ch; font-size: .95rem; }
+
+.ust { border-bottom: 1px solid var(--cizgi); }
+.ust-ic { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .25rem 1rem; min-height: 64px; padding-block: .75rem; color: var(--soluk); font-size: .9375rem; }
+.ust-ic b { color: var(--murekkep); font-weight: 600; }
+
+.giris { padding-block: 3rem 3.5rem; }
+.giris-ic { display: grid; gap: 1.25rem; max-width: 46rem; }
+.giris p { font-size: 1.125rem; color: var(--soluk); max-width: 56ch; }
+
+.onerilen { padding-block: 3.5rem; background: var(--yuzey); }
+.oneri-ic { display: grid; gap: 2rem; }
+.gorseller { position: relative; padding-bottom: 2.5rem; min-width: 0; }
+.gorseller .masaustu { width: 100%; border-radius: var(--r); box-shadow: inset 0 0 0 1px var(--cizgi); background: var(--kart); }
+.gorseller .telefon { position: absolute; right: 1rem; bottom: 0; width: 28%; max-width: 190px; border-radius: 18px; border: 4px solid var(--kart); box-shadow: 0 12px 32px -16px var(--golge); }
+.oneri-metin { display: grid; gap: 1.25rem; align-content: center; min-width: 0; }
+.etiket { font-weight: 600; color: var(--eylem); }
+.oneri-metin > p { color: var(--soluk); max-width: 56ch; }
+.oneri-metin > .etiket { color: var(--eylem); }
+.nedenler { list-style: none; margin: 0; padding: 0; display: grid; }
+.nedenler li { padding-block: .75rem; border-top: 1px solid var(--cizgi); }
+.nedenler li:last-child { border-bottom: 1px solid var(--cizgi); }
+.nedenler b { font-weight: 600; }
+.nedenler span { display: block; color: var(--soluk); font-size: .9375rem; }
+@media (min-width: 960px) { .onerilen { padding-block: 4.5rem; } .oneri-ic { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 3.5rem; align-items: center; } }
+
+.secenekler { padding-block: 4rem; }
+.bolum-bas { display: grid; gap: .75rem; margin-bottom: 2rem; max-width: 56ch; }
+.bolum-bas p { color: var(--soluk); }
+.izgara { display: grid; gap: 2.5rem 2rem; }
+@media (min-width: 700px) { .izgara { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 1040px) { .izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tasarim { display: grid; gap: .75rem; align-content: start; min-width: 0; }
+.tasarim .resim { display: block; border-radius: var(--r); overflow: hidden; box-shadow: inset 0 0 0 1px var(--cizgi); background: var(--kart); }
+.tasarim .resim img { transition: transform .4s cubic-bezier(0.23, 1, 0.32, 1); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .tasarim .resim:hover img { transform: scale(1.02); } }
+.tasarim p { color: var(--soluk); }
+.tasarim .kime { font-size: .9375rem; }
+.tasarim .kime b { color: var(--murekkep); font-weight: 600; }
+
+.ortak { padding-block: 4rem; background: var(--yuzey); }
+.ozellikler { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 3rem; }
+.ozellikler li { padding-block: 1rem; border-top: 1px solid var(--cizgi); display: grid; gap: .25rem; }
+.ozellikler b { font-weight: 600; }
+.ozellikler span { color: var(--soluk); font-size: .9375rem; }
+@media (min-width: 760px) { .ozellikler { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+.adimlar-bolum { padding-block: 4rem 5rem; }
+.adimlar { list-style: none; margin: 0; padding: 0; display: grid; max-width: 52rem; }
+.adimlar > li { display: flex; flex-wrap: wrap; gap: .25rem 2rem; padding-block: 1.25rem; border-top: 1px solid var(--cizgi); }
+.adimlar > li:last-child { border-bottom: 1px solid var(--cizgi); }
+.adimlar > li > b { flex: 0 1 11rem; font-weight: 600; }
+.adimlar .icerik { flex: 1 1 20rem; color: var(--soluk); display: grid; gap: .5rem; }
+.adimlar ul { margin: 0; padding-left: 1.25rem; display: grid; gap: .25rem; }
+
+.alt { border-top: 1px solid var(--cizgi); padding-block: 1.5rem 2rem; color: var(--soluk); font-size: .875rem; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Masaj salonu sitesi: yedi demo</h1>
-  <p class="giris">Aynı içerik, yedi farklı görünüm. G rakip analizine göre önerilen yön; A, B ve C sakin, D marjinal, E minimalist, F animasyonlu. Hepsinde WhatsApp ve arama düğmeleri, masaj başına hazır mesaj, randevu mesajı hazırlayıcı ve çalışma saatine göre açık/kapalı bilgisi var. Telefondan açarsanız alttaki WhatsApp ve Ara çubuğunu da görürsünüz.</p>
+<header class="ust">
+  <div class="kap ust-ic">
+    <b>Masaj salonu web sitesi</b>
+    <span>Tasarım seçenekleri, Ekim 2026</span>
+  </div>
+</header>
 
-  <section class="onerilen" aria-labelledby="g-baslik">
-    <a class="resim" href="https://anbarci.github.io/masaj-salonu-g-net/" tabindex="-1" aria-hidden="true"><img src="img/on-g-net.jpg" alt="" width="960" height="600"></a>
-    <div class="yon">
-      <p class="etiket">Rakip analizine göre önerilen</p>
-      <h2 id="g-baslik">G · Net</h2>
-      <p>Denizli, Türkiye geneli ve yurt dışından 22 masaj sitesi incelendi. Bu tasarım ziyaretçinin dört sorusunu ilk ekranda yanıtlar: ne var, kaç para, şu an açık mı, nasıl ulaşırım.</p>
-      <ul>
-        <li>Güven kuralları açıkça yazılı: yalnız profesyonel masaj, terapisti siz seçersiniz, ek ücret yok</li>
-        <li>"Hangi masaj size uygun?" seçicisi öneri, fiyat ve hazır WhatsApp mesajı verir</li>
-        <li>Fiyat tablosu, fiyata dahil olanlar, üç adımda ilk randevu, sık sorulanlar</li>
-        <li>Yalnız eylemler yeşil; telefonda altta, masaüstünde üstte sabit WhatsApp ve arama</li>
-      </ul>
-      <dl><dt>Yazı</dt><dd>Lexend</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-g-net/" aria-label="G Net demosunu gör">Demoyu gör</a>
+<main>
+  <section class="giris" aria-labelledby="baslik">
+    <div class="kap giris-ic">
+      <h1 id="baslik">Masaj salonunuz için yedi site tasarımı</h1>
+      <p>Hepsi telefonda ve bilgisayarda çalışır; ziyaretçiyi WhatsApp’tan yazmaya ya da aramaya yönlendirir. Demoları açıp deneyin, beğendiğinizi seçin.</p>
     </div>
   </section>
 
-  <h2 class="yonler-baslik">Öteki altı yön</h2>
-  <div class="yonler">
-    <section class="yon">
-      <a class="resim" href="https://anbarci.github.io/masaj-salonu-a-tas/" tabindex="-1" aria-hidden="true"><img src="img/on-a-tas.jpg" alt="" width="960" height="600"></a>
-      <h2>A · Taş</h2>
-      <p>Fotoğraf öncelikli. Sıcak taş fotoğrafının üstünde başlık, her masajın yanında kendi fotoğrafı, geniş havlu bandı.</p>
-      <div class="renk" aria-hidden="true"><i class="r1"></i><i class="r2"></i><i class="r3"></i></div>
-      <dl><dt>Renk</dt><dd>Arduvaz gri + kiremit</dd><dt>Yazı</dt><dd>Albert Sans</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-a-tas/" aria-label="A Taş demosunu gör">Demoyu gör</a>
-    </section>
-    <section class="yon">
-      <a class="resim" href="https://anbarci.github.io/masaj-salonu-b-aksam/" tabindex="-1" aria-hidden="true"><img src="img/on-b-aksam.jpg" alt="" width="960" height="600"></a>
-      <h2>B · Akşam</h2>
-      <p>Mum ışığında akşam seansı. Koyu ilk ekran, menü kartı gibi noktalı fiyat listesi, 50 dakikalık seansın akışı.</p>
-      <div class="renk" aria-hidden="true"><i class="r4"></i><i class="r5"></i><i class="r6"></i></div>
-      <dl><dt>Renk</dt><dd>Sıcak siyah + taba</dd><dt>Yazı</dt><dd>Jost</dd><dt>Tema</dt><dd>Yalnız koyu</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-b-aksam/" aria-label="B Akşam demosunu gör">Demoyu gör</a>
-    </section>
-    <section class="yon">
-      <a class="resim" href="https://anbarci.github.io/masaj-salonu-c-pestamal/" tabindex="-1" aria-hidden="true"><img src="img/on-c-pestamal.jpg" alt="" width="960" height="600"></a>
-      <h2>C · Peştamal</h2>
-      <p>Denizli dokuması peştamaldan çizgi ve çivit mavisi. Randevu formu ilk ekranda, fiyatlar tablo, ulaşım bilgisi.</p>
-      <div class="renk" aria-hidden="true"><i class="r7"></i><i class="r8"></i><i class="r9"></i></div>
-      <dl><dt>Renk</dt><dd>Pamuk beyazı + çivit</dd><dt>Yazı</dt><dd>Rethink Sans</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-c-pestamal/" aria-label="C Peştamal demosunu gör">Demoyu gör</a>
-    </section>
-    <section class="yon">
-      <a class="resim" href="https://anbarci.github.io/masaj-salonu-d-poster/" tabindex="-1" aria-hidden="true"><img src="img/on-d-poster.jpg" alt="" width="960" height="600" loading="lazy"></a>
-      <h2>D · Poster</h2>
-      <p>Marjinal. Ekranı dolduran başlık, akan kırmızı fiyat şeridi, üzerine gelince fotoğrafı açılan fiyat dizini, kutulu sorular.</p>
-      <div class="renk" aria-hidden="true"><i class="r10"></i><i class="r11"></i><i class="r12"></i></div>
-      <dl><dt>Renk</dt><dd>Kâğıt grisi + uyarı kırmızısı</dd><dt>Yazı</dt><dd>Archivo + JetBrains Mono</dd><dt>Tema</dt><dd>Yalnız açık</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-d-poster/" aria-label="D Poster demosunu gör">Demoyu gör</a>
-    </section>
-    <section class="yon">
-      <a class="resim" href="https://anbarci.github.io/masaj-salonu-e-sessiz/" tabindex="-1" aria-hidden="true"><img src="img/on-e-sessiz.jpg" alt="" width="960" height="600" loading="lazy"></a>
-      <h2>E · Sessiz</h2>
-      <p>Minimalist. Tek sütun, bol boşluk. Randevu formu tek bir cümle: masajı, günü ve saati cümlenin içinden seçersiniz.</p>
-      <div class="renk" aria-hidden="true"><i class="r13"></i><i class="r14"></i><i class="r15"></i></div>
-      <dl><dt>Renk</dt><dd>Nötr beyaz + mürekkep</dd><dt>Yazı</dt><dd>Hanken Grotesk</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-e-sessiz/" aria-label="E Sessiz demosunu gör">Demoyu gör</a>
-    </section>
-    <section class="yon">
-      <a class="resim" href="https://anbarci.github.io/masaj-salonu-f-nefes/" tabindex="-1" aria-hidden="true"><img src="img/on-f-nefes.jpg" alt="" width="960" height="600" loading="lazy"></a>
-      <h2>F · Nefes</h2>
-      <p>Animasyonlu. Nefes halkası, kaydırdıkça üst üste binen masaj kartları, yana kayan salon galerisi, okuma çubuğu.</p>
-      <div class="renk" aria-hidden="true"><i class="r16"></i><i class="r17"></i><i class="r18"></i></div>
-      <dl><dt>Renk</dt><dd>Orman yeşili + kehribar</dd><dt>Yazı</dt><dd>Sora</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
-      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-f-nefes/" aria-label="F Nefes demosunu gör">Demoyu gör</a>
-    </section>
-  </div>
+  <section class="onerilen" aria-labelledby="g-baslik">
+    <div class="kap oneri-ic">
+      <div class="gorseller">
+        <img class="masaustu" src="img/on-g-net.jpg" alt="G tasarımının bilgisayardaki ilk ekranı" width="1200" height="750">
+        <img class="telefon" src="img/tel-g-net.jpg" alt="G tasarımının telefondaki ilk ekranı" width="700" height="1515" loading="lazy">
+      </div>
+      <div class="oneri-metin">
+        <p class="etiket">Önerimiz</p>
+        <h2 id="g-baslik">G · Net</h2>
+        <p>Denizli’de ve Türkiye genelinde 22 masaj sitesini inceledik. Ziyaretçinin aklındaki soruları ilk ekranda yanıtlayan site çok az. Bu tasarım onları en başta yanıtlıyor.</p>
+        <ul class="nedenler">
+          <li><b>Fiyat, saat ve adres ilk ekranda</b><span>“Kaç para?”, “Şu an açık mı?”, “Nerede?” soruları kaydırmadan yanıtlanıyor.</span></li>
+          <li><b>Güven veren açık kurallar</b><span>Masaj salonu arayanlar düzgün bir yer arıyor; salonun nasıl çalıştığı en başta yazılı.</span></li>
+          <li><b>“Hangi masaj size uygun?”</b><span>Kararsız ziyaretçiye masaj önerir, fiyatını gösterir, WhatsApp mesajını hazırlar.</span></li>
+          <li><b>Okunaklı ve hep görünür düğmeler</b><span>Rakiplerin çoğunda WhatsApp düğmesinin yazısı zor okunuyor; burada her düğme net, telefonda altta hep duruyor.</span></li>
+        </ul>
+        <a class="dugme" href="https://anbarci.github.io/masaj-salonu-g-net/" aria-label="G Net demosunu gör">Demoyu gör</a>
+      </div>
+    </div>
+  </section>
 
-  <p class="not">Demolardaki salon adı, telefon, adres, fiyatlar ve metinler örnektir; WhatsApp ve arama düğmeleri örnek numaraya (0 555 000 00 00) gider. Fotoğraflar Unsplash'ten geçici olarak alındı.</p>
+  <section class="secenekler" aria-labelledby="secenek-baslik">
+    <div class="kap">
+      <div class="bolum-bas">
+        <h2 id="secenek-baslik">Öteki altı tasarım</h2>
+        <p>Aynı bilgiler, farklı görünüm. Bir tasarımda beğendiğiniz parçayı başka bir tasarıma da taşıyabiliriz.</p>
+      </div>
+      <div class="izgara">
+        <article class="tasarim">
+          <a class="resim" href="https://anbarci.github.io/masaj-salonu-a-tas/" tabindex="-1" aria-hidden="true"><img src="img/on-a-tas.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+          <h3>A · Taş</h3>
+          <p>Fotoğrafla açılan sıcak bir sayfa; her masajın yanında kendi fotoğrafı var.</p>
+          <p class="kime"><b>Kime uygun:</b> Salonunun güzel fotoğrafları olan, sıcak bir ilk izlenim isteyenlere.</p>
+          <a class="dugme" href="https://anbarci.github.io/masaj-salonu-a-tas/" aria-label="A Taş demosunu gör">Demoyu gör</a>
+        </article>
+        <article class="tasarim">
+          <a class="resim" href="https://anbarci.github.io/masaj-salonu-b-aksam/" tabindex="-1" aria-hidden="true"><img src="img/on-b-aksam.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+          <h3>B · Akşam</h3>
+          <p>Mum ışığında, koyu ve sakin bir sayfa; fiyatlar menü kartı gibi.</p>
+          <p class="kime"><b>Kime uygun:</b> Akşam geç saate kadar açık olmayı öne çıkarmak isteyenlere.</p>
+          <a class="dugme" href="https://anbarci.github.io/masaj-salonu-b-aksam/" aria-label="B Akşam demosunu gör">Demoyu gör</a>
+        </article>
+        <article class="tasarim">
+          <a class="resim" href="https://anbarci.github.io/masaj-salonu-c-pestamal/" tabindex="-1" aria-hidden="true"><img src="img/on-c-pestamal.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+          <h3>C · Peştamal</h3>
+          <p>Denizli peştamalının çizgilerinden ilham; randevu formu ilk ekranda.</p>
+          <p class="kime"><b>Kime uygun:</b> Yerel kimliği ve hızlı randevuyu öne almak isteyenlere.</p>
+          <a class="dugme" href="https://anbarci.github.io/masaj-salonu-c-pestamal/" aria-label="C Peştamal demosunu gör">Demoyu gör</a>
+        </article>
+        <article class="tasarim">
+          <a class="resim" href="https://anbarci.github.io/masaj-salonu-d-poster/" tabindex="-1" aria-hidden="true"><img src="img/on-d-poster.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+          <h3>D · Poster</h3>
+          <p>Büyük harfler ve güçlü kırmızı; alışılmışın dışında, dikkat çeken bir sayfa.</p>
+          <p class="kime"><b>Kime uygun:</b> Genç ve sporcu kitleye seslenen, farklı görünmek isteyenlere.</p>
+          <a class="dugme" href="https://anbarci.github.io/masaj-salonu-d-poster/" aria-label="D Poster demosunu gör">Demoyu gör</a>
+        </article>
+        <article class="tasarim">
+          <a class="resim" href="https://anbarci.github.io/masaj-salonu-e-sessiz/" tabindex="-1" aria-hidden="true"><img src="img/on-e-sessiz.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+          <h3>E · Sessiz</h3>
+          <p>Bol boşluklu, sade bir sayfa; randevu tek bir cümleyle yazılır.</p>
+          <p class="kime"><b>Kime uygun:</b> Az ve öz anlatımı seven, sakin bir marka isteyenlere.</p>
+          <a class="dugme" href="https://anbarci.github.io/masaj-salonu-e-sessiz/" aria-label="E Sessiz demosunu gör">Demoyu gör</a>
+        </article>
+        <article class="tasarim">
+          <a class="resim" href="https://anbarci.github.io/masaj-salonu-f-nefes/" tabindex="-1" aria-hidden="true"><img src="img/on-f-nefes.jpg" alt="" width="1200" height="750" loading="lazy"></a>
+          <h3>F · Nefes</h3>
+          <p>Hareketli bir sayfa: nefes halkası, kaydırdıkça üst üste gelen masaj kartları.</p>
+          <p class="kime"><b>Kime uygun:</b> Rahatlama deneyimini sayfada da hissettirmek isteyenlere.</p>
+          <a class="dugme" href="https://anbarci.github.io/masaj-salonu-f-nefes/" aria-label="F Nefes demosunu gör">Demoyu gör</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ortak" aria-labelledby="ortak-baslik">
+    <div class="kap">
+      <div class="bolum-bas">
+        <h2 id="ortak-baslik">Her tasarımda olanlar</h2>
+      </div>
+      <ul class="ozellikler">
+        <li><b>WhatsApp ve arama düğmeleri</b><span>Telefonda ekranın altında hep görünür; tek dokunuşla yazışma ya da arama başlar.</span></li>
+        <li><b>Her masaj için hazır mesaj</b><span>Ziyaretçi bir masaja dokununca WhatsApp o masajın adıyla yazılmış olarak açılır.</span></li>
+        <li><b>Randevu mesajı</b><span>Masaj, gün ve saat seçilir; mesaj hazır gelir, siz saati onaylarsınız.</span></li>
+        <li><b>“Şu an açık” bilgisi</b><span>Çalışma saatinize göre sayfada kendiliğinden değişir.</span></li>
+        <li><b>Google’da yerel aramaya uygun</b><span>Adres, çalışma saatleri ve fiyatlar Google’ın okuyacağı biçimde sayfada.</span></li>
+        <li><b>Telefon, tablet ve bilgisayar</b><span>Her ekranda düzgün görünür, hızlı açılır, açılır pencere çıkmaz.</span></li>
+        <li><b>Herkes için okunur</b><span>Yazı ve düğme renkleri erişilebilirlik ölçütlerini geçer; site klavyeyle de kullanılır.</span></li>
+        <li><b>Açık ve koyu tema</b><span>A, C, E, F ve G’de üstteki düğmeyle değişir; B koyu, D açık tasarlandı.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="adimlar-bolum" aria-labelledby="adim-baslik">
+    <div class="kap">
+      <div class="bolum-bas">
+        <h2 id="adim-baslik">Sonraki adımlar</h2>
+      </div>
+      <ol class="adimlar">
+        <li><b>Seçin</b><div class="icerik"><p>Beğendiğiniz tasarımı ya da birkaç tasarımdan beğendiğiniz parçaları söyleyin.</p></div></li>
+        <li><b>Bilgilerinizi gönderin</b><div class="icerik"><p>Demolardaki ad, telefon, adres, fiyat ve fotoğraflar örnektir; hepsi sizinkilerle değişir.</p><ul>
+          <li>Salonun adı ve varsa logosu</li>
+          <li>WhatsApp ve telefon numarası</li>
+          <li>Açık adres ve Google Haritalar konumu</li>
+          <li>Çalışma saatleri</li>
+          <li>Masaj listesi, süreler ve fiyatlar</li>
+          <li>Salonunuzun fotoğrafları: odalar, giriş, duş</li>
+          <li>Salon kuralları: terapist seçimi, iptal, ödeme</li>
+        </ul></div></li>
+        <li><b>Yayına alalım</b><div class="icerik"><p>Siteyi alan adınızda yayına alır, Google İşletme Profilinize bağlarız.</p></div></li>
+      </ol>
+    </div>
+  </section>
 </main>
+
+<footer class="alt">
+  <div class="kap">Ekim 2026</div>
+</footer>
 </body>
 </html>
