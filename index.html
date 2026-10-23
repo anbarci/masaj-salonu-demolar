@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Masaj Salonu Demoları</title>
-<meta name="description" content="Masaj salonu web sitesi için altı tasarım yönünün canlı demoları: Taş, Akşam, Peştamal, Poster, Sessiz ve Nefes.">
+<meta name="description" content="Masaj salonu web sitesi için yedi tasarım yönünün canlı demoları; rakip analizine göre önerilen yön G · Net.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:,">
 <style>
@@ -32,6 +32,12 @@ p { margin: 0; }
 .renk .r10 { background: #E9E9E5; } .renk .r11 { background: #121212; } .renk .r12 { background: #D91414; }
 .renk .r13 { background: #FAFAF9; } .renk .r14 { background: #1C1C1A; } .renk .r15 { background: #66665F; }
 .renk .r16 { background: #12352B; } .renk .r17 { background: #F1F2EC; } .renk .r18 { background: #E9A23B; }
+.onerilen { display: grid; gap: 1.5rem; margin-bottom: 3.5rem; padding: 1.5rem; border-radius: 14px; background: var(--yuzey); border: 1px solid var(--cizgi); }
+.onerilen .resim { border: 1px solid var(--cizgi); }
+.onerilen ul { margin: 0; padding-left: 1.1rem; color: var(--soluk); display: grid; gap: .3rem; }
+.onerilen .etiket { font-weight: 600; color: var(--soluk); }
+@media (min-width: 900px) { .onerilen { grid-template-columns: 1.2fr 1fr; gap: 2.5rem; padding: 2rem; align-items: center; } }
+.yonler-baslik { font-size: 1.35rem; margin: 0 0 1.5rem; }
 dl { margin: 0; display: grid; grid-template-columns: 4.5rem 1fr; gap: .2rem .75rem; font-size: .95rem; }
 dt { font-weight: 600; }
 dd { margin: 0; color: var(--soluk); }
@@ -45,9 +51,27 @@ dd { margin: 0; color: var(--soluk); }
 </head>
 <body>
 <main>
-  <h1>Masaj salonu sitesi: altı demo</h1>
-  <p class="giris">Aynı içerik, altı farklı görünüm. A, B ve C sakin yönler; D marjinal, E minimalist, F animasyonlu. Hepsinde WhatsApp ve arama düğmeleri, masaj başına hazır mesaj, randevu mesajı hazırlayıcı ve çalışma saatine göre açık/kapalı bilgisi var. Telefondan açarsanız alttaki WhatsApp ve Ara çubuğunu da görürsünüz.</p>
+  <h1>Masaj salonu sitesi: yedi demo</h1>
+  <p class="giris">Aynı içerik, yedi farklı görünüm. G rakip analizine göre önerilen yön; A, B ve C sakin, D marjinal, E minimalist, F animasyonlu. Hepsinde WhatsApp ve arama düğmeleri, masaj başına hazır mesaj, randevu mesajı hazırlayıcı ve çalışma saatine göre açık/kapalı bilgisi var. Telefondan açarsanız alttaki WhatsApp ve Ara çubuğunu da görürsünüz.</p>
 
+  <section class="onerilen" aria-labelledby="g-baslik">
+    <a class="resim" href="https://anbarci.github.io/masaj-salonu-g-net/" tabindex="-1" aria-hidden="true"><img src="img/on-g-net.jpg" alt="" width="960" height="600"></a>
+    <div class="yon">
+      <p class="etiket">Rakip analizine göre önerilen</p>
+      <h2 id="g-baslik">G · Net</h2>
+      <p>Denizli, Türkiye geneli ve yurt dışından 22 masaj sitesi incelendi. Bu tasarım ziyaretçinin dört sorusunu ilk ekranda yanıtlar: ne var, kaç para, şu an açık mı, nasıl ulaşırım.</p>
+      <ul>
+        <li>Güven kuralları açıkça yazılı: yalnız profesyonel masaj, terapisti siz seçersiniz, ek ücret yok</li>
+        <li>"Hangi masaj size uygun?" seçicisi öneri, fiyat ve hazır WhatsApp mesajı verir</li>
+        <li>Fiyat tablosu, fiyata dahil olanlar, üç adımda ilk randevu, sık sorulanlar</li>
+        <li>Yalnız eylemler yeşil; telefonda altta, masaüstünde üstte sabit WhatsApp ve arama</li>
+      </ul>
+      <dl><dt>Yazı</dt><dd>Lexend</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
+      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-g-net/" aria-label="G Net demosunu gör">Demoyu gör</a>
+    </div>
+  </section>
+
+  <h2 class="yonler-baslik">Öteki altı yön</h2>
   <div class="yonler">
     <section class="yon">
       <a class="resim" href="https://anbarci.github.io/masaj-salonu-a-tas/" tabindex="-1" aria-hidden="true"><img src="img/on-a-tas.jpg" alt="" width="960" height="600"></a>
