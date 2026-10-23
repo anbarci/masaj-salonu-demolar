@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masaj Salonu Demoları</title>
+<meta name="description" content="Masaj salonu web sitesi için üç tasarım yönünün canlı demoları: Taş, Akşam ve Peştamal.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<style>
+:root { --zemin: #F4F4F2; --yuzey: #FBFBFA; --murekkep: #1D1F22; --soluk: #55595F; --cizgi: #D6D7D9; --dugme: #1D1F22; --dugme-uzeri: #F4F4F2; --r: 10px; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --zemin: #151618; --yuzey: #1C1D20; --murekkep: #E8E9EB; --soluk: #A4A8AE; --cizgi: #2D2F33; --dugme: #E8E9EB; --dugme-uzeri: #151618; } }
+:root[data-theme="dark"] { --zemin: #151618; --yuzey: #1C1D20; --murekkep: #E8E9EB; --soluk: #A4A8AE; --cizgi: #2D2F33; --dugme: #E8E9EB; --dugme-uzeri: #151618; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--zemin); color: var(--murekkep); font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1200px; margin: 0 auto; padding: 2.5rem 16px 4rem; }
+h1 { font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem); line-height: 1.1; margin: 0 0 .75rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.35rem; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+.giris { color: var(--soluk); max-width: 62ch; margin-bottom: 2.5rem; }
+.yonler { display: grid; gap: 2.5rem; }
+@media (min-width: 900px) { .yonler { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+.yon { display: grid; gap: .85rem; align-content: start; }
+.resim { display: block; border-radius: var(--r); overflow: hidden; border: 1px solid var(--cizgi); background: var(--yuzey); }
+.resim img { display: block; width: 100%; height: auto; }
+.yon p { color: var(--soluk); }
+.renk { display: flex; gap: .4rem; }
+.renk i { width: 1.6rem; height: 1.6rem; border-radius: 6px; border: 1px solid var(--cizgi); }
+.renk .r1 { background: #EDEFEE; } .renk .r2 { background: #1C2529; } .renk .r3 { background: #A9442A; }
+.renk .r4 { background: #131110; } .renk .r5 { background: #EFE8DE; } .renk .r6 { background: #D6A574; }
+.renk .r7 { background: #F6F7F5; } .renk .r8 { background: #16203A; } .renk .r9 { background: #2C3E8F; }
+dl { margin: 0; display: grid; grid-template-columns: 4.5rem 1fr; gap: .2rem .75rem; font-size: .95rem; }
+dt { font-weight: 600; }
+dd { margin: 0; color: var(--soluk); }
+.dugme { justify-self: start; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 1.4rem; border-radius: var(--r); background: var(--dugme); color: var(--dugme-uzeri); font-weight: 600; text-decoration: none; white-space: nowrap; transition: transform .16s ease, opacity .2s ease; }
+.dugme:active { transform: scale(.97); }
+.dugme:focus-visible { outline: 3px solid var(--murekkep); outline-offset: 3px; }
+@media (hover: hover) { .dugme:hover { opacity: .88; } }
+@media (prefers-reduced-motion: reduce) { .dugme { transition: none; } .dugme:active { transform: none; } }
+.not { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--cizgi); color: var(--soluk); max-width: 70ch; font-size: .95rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Masaj salonu sitesi: üç demo</h1>
+  <p class="giris">Aynı içerik, üç farklı görünüm. Hepsinde WhatsApp ve arama düğmeleri, masaj başına hazır mesaj, randevu mesajı hazırlayıcı ve çalışma saatine göre açık/kapalı bilgisi var. Telefondan açarsanız alttaki WhatsApp ve Ara çubuğunu da görürsünüz.</p>
+
+  <div class="yonler">
+    <section class="yon">
+      <a class="resim" href="https://anbarci.github.io/masaj-salonu-a-tas/" tabindex="-1" aria-hidden="true"><img src="img/on-a-tas.jpg" alt="" width="960" height="600"></a>
+      <h2>A · Taş</h2>
+      <p>Fotoğraf öncelikli. Sıcak taş fotoğrafının üstünde başlık, her masajın yanında kendi fotoğrafı, geniş havlu bandı.</p>
+      <div class="renk" aria-hidden="true"><i class="r1"></i><i class="r2"></i><i class="r3"></i></div>
+      <dl><dt>Renk</dt><dd>Arduvaz gri + kiremit</dd><dt>Yazı</dt><dd>Albert Sans</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
+      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-a-tas/" aria-label="A Taş demosunu gör">Demoyu gör</a>
+    </section>
+    <section class="yon">
+      <a class="resim" href="https://anbarci.github.io/masaj-salonu-b-aksam/" tabindex="-1" aria-hidden="true"><img src="img/on-b-aksam.jpg" alt="" width="960" height="600"></a>
+      <h2>B · Akşam</h2>
+      <p>Mum ışığında akşam seansı. Koyu ilk ekran, menü kartı gibi noktalı fiyat listesi, 50 dakikalık seansın akışı.</p>
+      <div class="renk" aria-hidden="true"><i class="r4"></i><i class="r5"></i><i class="r6"></i></div>
+      <dl><dt>Renk</dt><dd>Sıcak siyah + taba</dd><dt>Yazı</dt><dd>Jost</dd><dt>Tema</dt><dd>Yalnız koyu</dd></dl>
+      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-b-aksam/" aria-label="B Akşam demosunu gör">Demoyu gör</a>
+    </section>
+    <section class="yon">
+      <a class="resim" href="https://anbarci.github.io/masaj-salonu-c-pestamal/" tabindex="-1" aria-hidden="true"><img src="img/on-c-pestamal.jpg" alt="" width="960" height="600"></a>
+      <h2>C · Peştamal</h2>
+      <p>Denizli dokuması peştamaldan çizgi ve çivit mavisi. Randevu formu ilk ekranda, fiyatlar tablo, ulaşım bilgisi.</p>
+      <div class="renk" aria-hidden="true"><i class="r7"></i><i class="r8"></i><i class="r9"></i></div>
+      <dl><dt>Renk</dt><dd>Pamuk beyazı + çivit</dd><dt>Yazı</dt><dd>Rethink Sans</dd><dt>Tema</dt><dd>Açık ve koyu</dd></dl>
+      <a class="dugme" href="https://anbarci.github.io/masaj-salonu-c-pestamal/" aria-label="C Peştamal demosunu gör">Demoyu gör</a>
+    </section>
+  </div>
+
+  <p class="not">Demolardaki salon adı, telefon, adres, fiyatlar ve metinler örnektir; WhatsApp ve arama düğmeleri örnek numaraya (0 555 000 00 00) gider. Fotoğraflar Unsplash'ten geçici olarak alındı.</p>
+</main>
+</body>
+</html>
